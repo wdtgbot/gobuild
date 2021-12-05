@@ -33,8 +33,10 @@ jobs:
           workdir: ./nging
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
-    - uses: ncipollo/release-action@v1
-      with:
-        artifacts: "./nging/dist/*.tar.gz"
-        tag :latest
-        token: ${{ secrets.TOKEN }}
+    - 
+        name: release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "./nging/dist/*.tar.gz"
+          tag :latest
+          token: ${{ secrets.TOKEN }}
