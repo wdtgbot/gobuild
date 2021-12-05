@@ -33,7 +33,7 @@ jobs:
           workdir: ./nging
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
-    - 
+      - 
         name: release
         uses: ncipollo/release-action@v1
         with:
