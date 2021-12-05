@@ -40,15 +40,15 @@ jobs:
         run: |
           sudo apt update
           sudo apt install rename -y
-          rename -v "s/nging*linux_amd64.tar.gz/nging_linux_amd64.tar.gz/" ./nging/dist/nging*linux_amd64.tar.gz
+          rename -v "s/nging*linux_amd64\.tar\.gz/nging_linux_amd64\.tar\.gz/" ./nging/dist/nging*linux_amd64.tar.gz
           
-          rename "s/nging*darwin_amd64.tar.gz/nging_darwin_amd64.tar.gz/" ./nging/dist/nging*darwin_amd64.tar.gz
+          rename "s/nging*darwin_amd64\.tar\.gz/nging_darwin_amd64\.tar\.gz/" ./nging/dist/nging*darwin_amd64.tar.gz
 
-          rename "s/nging*linux_arm64.tar.gz/nging_linux_arm64.tar.gz/" ./nging/dist/nging*linux_arm64.tar.gz
+          rename "s/nging*linux_arm64\.tar\.gz/nging_linux_arm64\.tar\.gz/" ./nging/dist/nging*linux_arm64.tar.gz
 
-          rename "s/nging*linux_386.tar.gz/nging_linux_386.tar.gz/" ./nging/dist/nging*linux_386.tar.gz
+          rename "s/nging*linux_386\.tar\.gz/nging_linux_386\.tar\.gz/" ./nging/dist/nging*linux_386.tar.gz
 
-          rename "s/nging*darwin_arm64.tar.gz/nging_darwin_arm64.tar.gz/" ./nging/dist/nging*darwin_arm64.tar.gz
+          rename "s/nging*darwin_arm64\.tar\.gz/nging_darwin_arm64\.tar\.gz/" ./nging/dist/nging*darwin_arm64.tar.gz
       - 
         name: release
         uses: ncipollo/release-action@v1
