@@ -38,5 +38,5 @@ jobs:
         uses: ncipollo/release-action@v1
         with:
           artifacts: "./nging/dist/*.tar.gz"
-          tag :latest
+          tag: latest
           token: ${{ secrets.TOKEN }}
