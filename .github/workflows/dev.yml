@@ -8,7 +8,7 @@ on:
 
 jobs:
   goreleaser:
-    runs-on: ubuntu-latest
+    runs-on: centos-latest
     steps:
       -
         name: Checkout
@@ -38,8 +38,8 @@ jobs:
       -
         name: rename
         run: |
-          sudo apt update
-          sudo apt install rename -y
+          sudo yum update
+          sudo yum install rename -y
           rename nging*linux_amd64.tar.gz nging_linux_amd64.tar.gz ./nging/dist/nging*linux_amd64.tar.gz
 
           rename nging*darwin_amd64.tar.gz nging_darwin_amd64.tar.gz ./nging/dist/nging*darwin_amd64.tar.gz
