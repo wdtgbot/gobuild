@@ -30,6 +30,6 @@ jobs:
           distribution: goreleaser
           version: latest
           args: release --rm-dist
-          workdir:./nging
+          workdir: ./nging
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
