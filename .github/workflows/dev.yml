@@ -41,4 +41,5 @@ jobs:
         with:
           artifacts: "./nging/dist/*.tar.gz"
           tag: latest
+          removeArtifacts: true
           token: ${{ secrets.TOKEN }}
