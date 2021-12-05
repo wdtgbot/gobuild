@@ -38,6 +38,8 @@ jobs:
       -
         name: rename
         run: |
+          apt update
+          apt install rename -y
           rename ​nging_?linux_amd64.tar.gz nging_linux_amd64.tar.gz ./nging/dist/nging_?linux_amd64.tar.gz
 
           rename nging_?darwin_amd64.tar.gz nging_darwin_amd64.tar.gz ./nging/dist/nging_?darwin_amd64.tar.gz
