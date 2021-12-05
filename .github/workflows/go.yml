@@ -1,8 +1,10 @@
 name: goreleaser
 
 on:
-  pull_request:
-  push:
+  workflow_dispatch:
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '30 0 * * *'
 
 jobs:
   goreleaser:
