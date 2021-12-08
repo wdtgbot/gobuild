@@ -27,7 +27,7 @@ jobs:
           sudo apt install unzip wget -y
           wget https://github.com/admpub/nging/archive/refs/tags/v3.6.4.zip -O nging.zip
           unzip nging.zip
-          mv nging-3.6.4 nging
+          mv ./nging-3.6.4 ./nging
           
       -
         name: Run GoReleaser
