@@ -25,7 +25,7 @@ jobs:
         run: |
           sudo apt update
           sudo apt install unzip wget -y
-          wget https://github.com/admpub/nging/archive/refs/tags/v3.6.4.zip -o nging.zip
+          wget https://github.com/admpub/nging/archive/refs/tags/v3.6.4.zip -O nging.zip
           unzip nging.zip
           mv nging-3.6.4 nging
           
