@@ -2,8 +2,7 @@ name: stable
 
 on:
   workflow_dispatch:
-  push:
-    tags:
+  release:
       - 'ng*'
   schedule:
     # * is a special character in YAML so you have to quote this string
