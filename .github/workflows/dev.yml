@@ -2,9 +2,6 @@ name: dev
 
 on:
   workflow_dispatch:
-  push:
-    tags:
-      - 'ng*'
   schedule:
     # * is a special character in YAML so you have to quote this string
     - cron:  '30 0 * * *'
