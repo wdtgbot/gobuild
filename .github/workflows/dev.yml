@@ -20,6 +20,9 @@ jobs:
         uses: actions/setup-go@v2
         with:
           go-version: 1.17.3 
+      - 
+        name: Update Submodules
+        run: git submodule foreach 'git fetch origin; git checkout $(git rev-parse --abbrev-ref HEAD); git reset --hard origin/$(git rev-parse --abbrev-ref HEAD); git submodule update --recursive; git clean -dfx'
       -
         name: git
         run: |
