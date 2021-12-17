@@ -1,0 +1,3 @@
+[submodule "nging"]
+	path = nging
+	url = https://github.com/admpub/nging
