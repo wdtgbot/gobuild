@@ -14,13 +14,11 @@ jobs:
         with:
              submodules: recursive
       - name: init
-        uses: snickerbockers/submodules-init@v4
-      - name: init
         run : git submodule add https://github.com/admpub/nging.git nging
       - name: Push
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          commit_message: Update Dockerfile
+          commit_message: Update sub
           skip_dirty_check: false
           commit_user_name: Action Bot
           commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
