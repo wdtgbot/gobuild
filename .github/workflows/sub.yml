@@ -15,7 +15,7 @@ jobs:
              submodules: recursive
              
       - name: Update Submodules
-        run: git submodule foreach 'git fetch origin; git checkout $(git rev-parse --abbrev-ref HEAD); git reset --hard origin/$(git rev-parse --abbrev-ref HEAD); git submodule update --recursive; git clean -dfx'
+        run: git submodule update --init --recursive
       - name: Push
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
