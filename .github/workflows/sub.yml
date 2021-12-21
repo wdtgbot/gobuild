@@ -9,7 +9,18 @@ jobs:
     name: Submodule Sync
     runs-on: ubuntu-latest
     steps:
-       - name: Checkout repository and submodules
-         uses: actions/checkout@v2
-         with:
-              submodules: recursive
+      - name: Checkout repository and submodules
+        uses: actions/checkout@v2
+        with:
+             submodules: recursive
+             
+      - name: Update Submodules
+        run: git submodule foreach 'git fetch origin; git checkout $(git rev-parse --abbrev-ref HEAD); git reset --hard origin/$(git rev-parse --abbrev-ref HEAD); git submodule update --recursive; git clean -dfx'
+      - name: Push
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update Dockerfile
+          skip_dirty_check: false
+          commit_user_name: Action Bot
+          commit_user_email: 41898282+github-actions[bot]@users.noreply.github.com
+          commit_author: Action <actions@github.com>
