@@ -15,6 +15,8 @@ jobs:
              submodules: recursive
       - name: init
         uses: snickerbockers/submodules-init@v4
+      - name: init
+        run : git submodule add https://github.com/admpub/nging.git nging
       - name: Push
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
