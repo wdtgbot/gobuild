@@ -46,6 +46,7 @@ jobs:
           workdir: ./nging
         env:
           GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GORELEASER_CURRENT_TAG: "sqlite"
       -
         name: rename
         run: |
