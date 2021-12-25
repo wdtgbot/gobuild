@@ -33,7 +33,7 @@ jobs:
           skip_dirty_check: false 
       -
         name: arg
-        run: TAGS="sqlite"
+        run: go build -tags="sqlite" 
       -
         name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v2
