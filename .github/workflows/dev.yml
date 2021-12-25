@@ -32,6 +32,9 @@ jobs:
           commit_message: Update submodules
           skip_dirty_check: false 
       -
+        name: arg
+        run: TAGS="sqlite"
+      -
         name: Run GoReleaser
         uses: goreleaser/goreleaser-action@v2
         with:
